@@ -1,12 +1,12 @@
 import pytest
 import requests
 
-from configuration import SERVICE_URL, GET_POST_BY_ID
-from response import Response
-from shema_get_post_by_id import Post
-from data_get_post_by_id import data as expected_post_data, headers as expected_response_headers, correct_post_id, \
+from task_2.data.configuration import SERVICE_URL, GET_POST_BY_ID
+from task_2.src.baseclasses.response import Response
+from task_2.src.pydantic_shemas.shema_get_post_by_id import Post
+from task_2.data.data_get_post_by_id import data as expected_post_data, headers as expected_response_headers, correct_post_id, \
     wrong_post_id
-from injections_data import simplesql, dangersql, xss, path_traversal, command_injection
+from task_2.data.injections_data import simplesql, dangersql, xss, path_traversal, command_injection
 
 
 @pytest.mark.parametrize('expected_status_code, post_id', [

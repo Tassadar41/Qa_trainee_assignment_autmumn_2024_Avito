@@ -1,4 +1,4 @@
-from global_enums import GlobalErrorMessages
+from task_2.src.enums.global_enums import GlobalErrorMessages
 
 
 class Response:
