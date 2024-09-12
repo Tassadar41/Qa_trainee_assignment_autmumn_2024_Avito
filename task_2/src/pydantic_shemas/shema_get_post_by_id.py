@@ -8,13 +8,14 @@ class Statistics(BaseModel):
     viewCount: int
 
 class Post(BaseModel):
-    createdAt: datetime
+    #createdAt: datetime
+    createdAt: str
     id: UUID
     name: str
     price: int
     sellerId: int
     statistics: Statistics
-
+"""
     # Валидатор для обработки неправильного формата даты
     @field_validator('createdAt', mode='before')
     def fix_datetime(cls, value):
@@ -23,4 +24,4 @@ class Post(BaseModel):
             value = value.split(" +")[0]  # Убираем лишнюю информацию о часовом поясе
         return datetime.fromisoformat(value)
 
-
+"""

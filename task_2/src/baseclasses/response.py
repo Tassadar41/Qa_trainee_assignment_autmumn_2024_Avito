@@ -1,5 +1,4 @@
-from task_2.src.enums.global_enums import GlobalErrorMessages
-
+from ..enums.global_enums import GlobalErrorMessages
 
 class Response:
     def __init__(self, response):
@@ -14,6 +13,10 @@ class Response:
                 shema.model_validate(item)
         else:
             shema.model_validate(self.response_json)
+
+    def validate_list(self, shema):
+        for obj in self.response_json:
+            shema.model_validate(obj)
 
 
     def assert_status_code(self, status_code):
@@ -31,3 +34,4 @@ class Response:
         for key, value in expected_headers.items():
             assert self.response_headers[key] == value, GlobalErrorMessages.NOT_EXPECTED_HEADERS.value
         return self
+
