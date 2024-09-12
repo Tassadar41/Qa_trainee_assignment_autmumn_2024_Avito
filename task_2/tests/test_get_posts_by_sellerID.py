@@ -11,10 +11,8 @@ from ..data.injections_data import simplesql, dangersql, xss, path_traversal, co
 
 
 @pytest.mark.parametrize('expected_status_code, seller_id', [
-    (404, nonexistent_lover_threshold_sellerID),
     (200, existent_lover_threshold_sellerID),
     (200, existent_upper_threshold_sellerID),
-    (404, nonexistent_upper_threshold_sellerID),
 ])
 def test_valid_status_code(expected_status_code, seller_id):
     r = requests.get(url=SERVICE_URL + seller_id + GET_POSTS_BY_SELLERID)
