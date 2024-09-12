@@ -64,7 +64,7 @@ def test_valid_response_headers(post_id, expected_headers, expected_status_code)
     (path_traversal, 404),
     (command_injection, 404),
 ])
-def test_sql_injections(injection, expected_status_code):
+def test_injections(injection, expected_status_code):
     r = requests.get(url=SERVICE_URL + GET_POST_BY_ID + injection)
     response = Response(r)
     response.assert_status_code(expected_status_code)

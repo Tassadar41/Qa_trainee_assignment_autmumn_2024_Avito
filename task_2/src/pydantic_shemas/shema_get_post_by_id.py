@@ -15,6 +15,7 @@ class Post(BaseModel):
     price: int
     sellerId: int
     statistics: Statistics
+
 """
     # Валидатор для обработки неправильного формата даты
     @field_validator('createdAt', mode='before')
