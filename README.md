@@ -1,8 +1,8 @@
 1. Склонируйте к себе репозиторий, в котором хранится проект тестового задания, через выполнение команды в терминале
     ```
-    git clone https://github.com/
+    git clone https://github.com/Tassadar41/Qa_trainee_assignment_autmumn_2024_Avito.git
     ```
-    Или скачайте zip архив по [ссылке](https://github.com/) и распакуйте его
+    Или скачайте zip архив по [ссылке](https://github.com/Tassadar41/Qa_trainee_assignment_autmumn_2024_Avito.git) и распакуйте его
 
 
 2. Убедитесь, что на Вашем компьютере установлен Python. В командной строке/терминале выполните команду
@@ -26,4 +26,4 @@
    ```
 5. Наконец, запустите тесты, выполнив команду  
    ```
-   pytest -s -v
+   pytest -s -v 
